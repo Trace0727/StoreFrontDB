@@ -1,6 +1,6 @@
 # StoreFrontDB
 
-A Java-based GUI application that simulates a role-based storefront system backed by a MySQL database. This project demonstrates JDBC integration, stored procedure usage, and real-time GUI interaction for user registration, login, inventory management, and order processing.
+A Java Swing-based desktop application that simulates a storefront interface with MySQL integration, allowing users to register, log in, place orders, and manage inventory using stored procedures.
 
 ---
 
@@ -9,45 +9,49 @@ A Java-based GUI application that simulates a role-based storefront system backe
 ```
 StoreFrontDB/
 ├── src/
-│   ├── StoreFrontGUI.java
-│   └── StoreFrontMain.java
-└──
+│   └── (default package)/
+│       ├── StoreFrontMain.java
+│       └── StoreFrontGUI.java
+├── lib/
+│   └── mysql-connector-j-9.3.0.jar
 ```
 
 ---
 
 ## Core Java Classes
 
+### `StoreFrontMain.java`
+- Entry point of the program
+- Launches the main GUI window
+
 ### `StoreFrontGUI.java`
 Contains all logic for:
-- User registration and login using stored procedures
-- Displaying and switching between admin and customer interfaces
-- Managing product inventory and submitting customer orders
-
-### `StoreFrontMain.java`
-Launches the application by creating the main GUI window.
+- Registering new users
+- Logging in with credentials
+- Role-based UI display (admin vs. customer)
+- Product ordering interface
+- Admin inventory and sales management
 
 ---
 
 ## How to Run
 
-Compile and run using any Java-compatible IDE (like Eclipse or IntelliJ), or from the command line:
+Compile and run using Eclipse or from the terminal:
 
 ```bash
-javac -cp ".:mysql-connector-j-8.x.x.jar" src/StoreFrontMain.java
-java -cp ".:mysql-connector-j-8.x.x.jar:src" StoreFrontMain
+javac -cp ".:lib/mysql-connector-j-9.3.0.jar" src/*.java
+java -cp ".:lib/mysql-connector-j-9.3.0.jar:src" StoreFrontMain
 ```
-
-Make sure to replace `mysql-connector-j-8.x.x.jar` with the actual filename of your JDBC driver.
 
 ---
 
 ## Future Enhancements
-- Add user order history tracking.
-- Implement password hashing and security improvements.
-- Add GUI filters/search for product listings.
-- Enable product editing and deletion features.
-  
+- Add user-friendly form validation and error prompts
+- Track individual order history per user
+- Export sales reports to CSV
+- Enhance UI layout using layout managers
+- Support database config file instead of hardcoded credentials
+
 ---
 
 ## License
@@ -60,4 +64,3 @@ See the [LICENSE] file for full details.
 **Trace Davis**  
 - GitHub: [Trace0727](https://github.com/Trace0727)  
 - LinkedIn: [Trace Davis](https://www.linkedin.com/in/trace-d-926380138/)
-c
