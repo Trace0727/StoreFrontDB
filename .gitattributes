@@ -1,1 +1,1 @@
-sql/StoreFrontDB_setup.sql linguist-detectable=true
+sql/*.sql linguist-detectable=true
