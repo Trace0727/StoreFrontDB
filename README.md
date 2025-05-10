@@ -13,6 +13,7 @@ StoreFrontDB/
 │   └── StoreFrontMain.java
 ├── sql/
 │   └── StoreFrontDB_setup.sql
+│   └── StoreFrontDB_dataInsert.sql
 ├── lib/
 │   └── mysql-connector-j-9.3.0.jar
 └──
