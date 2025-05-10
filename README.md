@@ -43,6 +43,7 @@ Run the SQL setup script to configure the database:
 
 ```bash
 mysql -u root -p < sql/StoreFrontDB_setup.sql
+mysql -u root -p < sql/StoreFrontDB_dataInsert.sql
 ```
 
 ### 2. Compile and Run the Java Code
